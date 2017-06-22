@@ -1,0 +1,75 @@
+//
+//  PrefixHeader.pch
+//  MVVMRACDemo
+//
+//  Created by mac on 2017/6/21.
+//  Copyright © 2017年 lifepay. All rights reserved.
+//
+
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+/*************************** 其他文件包含 *****************************/
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
+
+/*************************** 尺寸 *****************************/
+#define screenWidth [UIScreen mainScreen].bounds.size.width
+#define screenHeight [UIScreen mainScreen].bounds.size.height
+#define SIZE screenWidth/375.0
+#define navigationBarMaxY 64
+#define tabBarHeight 44
+#define MARGINLEFTRIGHT (16 * SIZE)
+
+/*************************** 字体大小 *****************************/
+#define LargeFont [UIFont systemFontOfSize:18*SIZE]
+#define MiddleFont [UIFont systemFontOfSize:16*SIZE]
+#define LittelFont [UIFont systemFontOfSize:14*SIZE]
+#define SmallestFont [UIFont systemFontOfSize:12*SIZE]
+#define SmallestSmallestFont [UIFont systemFontOfSize:10*SIZE]
+
+
+/*************************** 颜色 *****************************/
+/** 主色调 */
+#define mainColor [UIColor colorWithRed:211/255.0 green:47/255.0 blue:47/255.0 alpha:1]
+/** 高亮按钮颜色 */
+#define buttonHeightLightColor [UIColor colorWithRed:185/255.0 green:38/255.0 blue:38/255.0 alpha:1]
+/** 失效按钮颜色 */
+#define buttonEnableColor [UIColor colorWithRed:228/255.0 green:228/255.0 blue:228/255.0 alpha:1]
+/** 重要文字颜色颜色 */
+#define importTextColor [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1]
+/** 普通文字颜色颜色 */
+#define normalTextColor [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1]
+/** 低级文字颜色颜色 */
+#define lowTextColor [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1]
+/** 757575颜色 */
+#define sevenFiveColor [UIColor colorWithRed:117/255.0 green:117/255.0 blue:117/255.0 alpha:1]
+/** BD颜色 */
+#define BDColor [UIColor colorWithRed:189/255.0 green:189/255.0 blue:189/255.0 alpha:1]
+/** 内容区域背景色 */
+#define BackGroundColor [UIColor colorWithRed:235/255.0 green:239/255.0 blue:242/255.0 alpha:1]
+/** 整体背景色 */
+#define viewBackGroundColor [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]
+
+/*************************** 打印输出 *****************************/
+#ifdef __OBJC__
+
+#ifdef DEBUG //调试阶段
+#define LFLog(...) NSLog(__VA_ARGS__)
+#define APSFORPRODUCTION NO
+#define SHOWVERIFICATIONCODE YES
+
+
+#else //发布阶段
+#define LFLog(...)
+#define APSFORPRODUCTION YES
+#define SHOWVERIFICATIONCODE NO
+
+#endif
+
+#endif
+
+
+#endif /* LaiOFu_pch */
